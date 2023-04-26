@@ -44,18 +44,3 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Powerups
-    uniqueID: 3611381153
-    locked: 0
-  - name: Enemies
-    uniqueID: 387302477
-    locked: 0
-  - name: Mario
-    uniqueID: 1831106951
-    locked: 0
-  - name: Pipes
-    uniqueID: 3331011407
-    locked: 0
-  - name: Blocks
-    uniqueID: 4189827789
-    locked: 0
