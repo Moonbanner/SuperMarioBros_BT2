@@ -16,4 +16,10 @@ public static class Extensions
         RaycastHit2D hit = Physics2D.CircleCast(rigidbody.position, radius, direction, distance, layerMask);
         return hit.collider != null && hit.rigidbody != rigidbody;
     }
+
+    public static bool DotTest(this Transform transform, Transform other, Vector2 testDirection) //check the collision direction of 'this' object with 'other' object 
+    {
+        Vector2 direction = other.position - transform.position;
+        return Vector2.Dot(direction.normalized, testDirection) > 0.25f;      //in this case, 1 would mean directly downward, -1 is directly upward, and 0 is perfectly perpendicular
+    }
 }
