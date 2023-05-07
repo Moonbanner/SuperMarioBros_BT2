@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
         LoadLevel(world, stage + 1);
     }
 
-    private void ResetLevel(float delay)
+    public void ResetLevel(float delay)
     {
         Invoke(nameof(ResetLevel), delay);
     }

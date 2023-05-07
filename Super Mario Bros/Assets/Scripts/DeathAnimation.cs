@@ -45,7 +45,7 @@ public class DeathAnimation : MonoBehaviour
         {
             playerMovement.enabled = false;
         }
-        if (playerMovement != null)
+        if (entityMovement != null)
         {
             entityMovement.enabled = false;
         }
