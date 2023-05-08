@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class BlockHit : MonoBehaviour
 {
+    public GameObject item;
     public Sprite emptyBlock;
     public int maxHits = -1;
 
@@ -30,6 +31,11 @@ public class BlockHit : MonoBehaviour
         if (maxHits == 0)
         {
             spriteRenderer.sprite = emptyBlock;     //if the emptyBlock sprite is empty/not assigned in the Editor, the block would become invisible
+        }
+
+        if (item != null)
+        {
+            Instantiate(item, transform.position, Quaternion.identity);     //spawn the item at the position of the block, with the block's rotation
         }
 
         StartCoroutine(Animate());
