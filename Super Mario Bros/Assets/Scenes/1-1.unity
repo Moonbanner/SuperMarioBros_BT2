@@ -4744,7 +4744,7 @@ PrefabInstance:
     - target: {fileID: 2594322912178956845, guid: 521936bb36518dc46860757c97361f92, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 3966862793498125718, guid: cb3382d8a58419b43a5b6fbc3987cd78, type: 3}
+      objectReference: {fileID: 7866120559284091062, guid: 1a4b1409fe3907c4ca364dbf871ddd5c, type: 3}
     - target: {fileID: 7263007807911889290, guid: 521936bb36518dc46860757c97361f92, type: 3}
       propertyPath: m_Name
       value: MysteryBlock (1)
