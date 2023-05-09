@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 156582255805058779}
   - component: {fileID: 6858871460745609720}
   - component: {fileID: -4674133946927940315}
+  - component: {fileID: -4432158718323783678}
   m_Layer: 6
   m_Name: 1upMushroom
   m_TagString: Untagged
@@ -178,3 +179,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87baadc143534e94f9e8982ca9508f22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-4432158718323783678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7404919922539388304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e90b181621e2f90468e57a34b4bfa603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
