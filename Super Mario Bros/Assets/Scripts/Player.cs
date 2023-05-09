@@ -13,23 +13,29 @@ public class Player : MonoBehaviour
     public bool big => bigRenderer.enabled;
     public bool small => smallRenderer.enabled;
     public bool dead => deathAnimation.enabled;
+    public bool starpower { get; private set; }
 
     private void Awake()
     {
         deathAnimation = GetComponent<DeathAnimation>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
+        activeRenderer = smallRenderer;
     }
 
     public void Hit()
     {
-        if (big)
+        if (!dead && !starpower)
         {
-            Shrink();
+            if (big)
+            {
+                Shrink();
+            }
+            else
+            {
+                Death();
+            }
         }
-        else
-        {
-            Death();
-        }
+
     }
 
     private void Death()
@@ -74,7 +80,7 @@ public class Player : MonoBehaviour
         {
             elapsed += Time.deltaTime;
 
-            if (Time.frameCount % 16 == 0)
+            if (Time.frameCount % 4 == 0)
             {
                 smallRenderer.enabled = !smallRenderer.enabled;
                 bigRenderer.enabled = !smallRenderer.enabled;
@@ -87,4 +93,31 @@ public class Player : MonoBehaviour
         bigRenderer.enabled = false;
         activeRenderer.enabled = true;
     }    
+
+    public void Starpower(float duration = 10f)
+    {
+        starpower = true;
+        StartCoroutine(StarpowerAnimation(duration));
+    }
+
+    private IEnumerator StarpowerAnimation(float duration)
+    {
+        starpower = true;
+
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            if (Time.frameCount % 4 == 0)
+            {
+                //only change hue between 0 and 1, while leaving saturation and value the same
+                activeRenderer.spriteRenderer.color = Random.ColorHSV(0f, 1f, 1f, 1f, 1f, 1f);      
+            }
+
+            yield return null;
+        }
+
+        activeRenderer.spriteRenderer.color = Color.white;
+        starpower = false;
+    }
 }
