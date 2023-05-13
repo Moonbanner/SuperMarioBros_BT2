@@ -472,6 +472,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 318391838}
     m_Modifications:
+    - target: {fileID: 2135113120472705758, guid: 9305341b4ca58fa48b35a73ca8d9b53a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2925076032566211264, guid: 9305341b4ca58fa48b35a73ca8d9b53a, type: 3}
       propertyPath: m_Name
       value: PipeConnection
@@ -2391,6 +2395,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50a96c69d0b06fe4090e4ab7a2e65670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  height: 7
+  undergroundHeight: -9
 --- !u!1001 &519900455
 PrefabInstance:
   m_ObjectHideFlags: 0
