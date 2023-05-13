@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
         LoadLevel(1, 1);
     }
 
-    private void LoadLevel(int world, int scene) //world, stage
+    public void LoadLevel(int world, int scene) //world, stage
     {
         this.world = world;
         this.stage = scene;
@@ -53,11 +53,11 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene($"{world}-{scene}");  //'$' allows string interpolation - put variables in a string
     }
 
-    public void NextLevel()
+    /*public void NextLevel()
     {
         //Todo: need logic to check if current stage is the last stage
         LoadLevel(world, stage + 1);
-    }
+    }*/
 
     public void ResetLevel(float delay)
     {
