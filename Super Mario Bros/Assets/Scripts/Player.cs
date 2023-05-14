@@ -96,7 +96,6 @@ public class Player : MonoBehaviour
 
     public void Starpower(float duration = 10f)
     {
-        starpower = true;
         StartCoroutine(StarpowerAnimation(duration));
     }
 
@@ -108,10 +107,13 @@ public class Player : MonoBehaviour
 
         while (elapsed < duration)
         {
+            elapsed += Time.deltaTime;
+
             if (Time.frameCount % 4 == 0)
             {
                 //only change hue between 0 and 1, while leaving saturation and value the same
-                activeRenderer.spriteRenderer.color = Random.ColorHSV(0f, 1f, 1f, 1f, 1f, 1f);      
+                activeRenderer.spriteRenderer.color = Random.ColorHSV(0f, 1f, 1f, 1f, 1f, 1f);   
+                
             }
 
             yield return null;
